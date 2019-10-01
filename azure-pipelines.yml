@@ -17,6 +17,8 @@ steps:
    docker images
    
    docker build -t hellofargate ./HelloFargate
+
+   docker images
   displayName: 'Command Line Script'
 - task: ECRPushImage@1
   inputs:
@@ -25,3 +27,11 @@ steps:
     imageSource: 'imagename'
     sourceImageName: 'hellofargate'
     repositoryName: 'devopsdemolatest'
+
+- task: AWSCLI@1
+  inputs:
+    awsCredentials: 'AWS'
+    regionName: 'us-east-1'
+    awsCommand: 'ecs'
+    awsSubCommand: 'update-service'
+    awsArguments: '--cluster hellofargate --service hellofargateservice --force-new-deployment'

@@ -1,0 +1,31 @@
+# Docker
+# Build a Docker image 
+# https://docs.microsoft.com/azure/devops/pipelines/languages/docker
+pool:
+  name: Azure Pipelines
+  
+trigger:
+- master
+
+resources:
+- repo: self
+
+
+steps:
+- script: |
+   echo Write your commands here
+   
+   echo Hello world
+   
+   docker images
+   
+   docker build -t hellofargate ./HelloFargate
+  displayName: 'Command Line Script'
+
+- task: AmazonWebServices.aws-vsts-tools.ECRPushImage.ECRPushImage@1
+  displayName: 'Push Image: '
+  inputs:
+    awsCredentials: AWS
+    regionName: 'us-east-1'
+    sourceImageName: hellofargate
+    repositoryName: devopsdemolatest

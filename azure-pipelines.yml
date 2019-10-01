@@ -5,9 +5,9 @@
 
 trigger:
 - master
-
 pool:
-  name: Azure Pipelines
+  vmImage: 'ubuntu-latest'
+
 steps:
 - script: |
    echo Write your commands here

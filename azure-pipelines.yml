@@ -12,7 +12,7 @@ steps:
 - script: |
    echo Write your commands here
    
-   echo Hello world
+   echo Hi world
    
    docker images
    

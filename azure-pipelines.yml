@@ -24,7 +24,7 @@ steps:
   inputs:
     UserName: 'Azure to AWS'
     Message: 'AWS deployment started'
-    ApiToken: 'xoxp-645208011568-756078985317-781517236146-531344d110338276248062e788e6b078'
+    ApiToken: 'xoxp-645208011568-794965329972-783955608531-27ec630b65370dd0c05111508e3d89fb'
     Channel: 'e2etraceability'
     IconUrl: 'devops-traceablity'
     NeverFails: false
@@ -48,7 +48,7 @@ steps:
   inputs:
     UserName: 'Azure to AWS'
     Message: 'AWS deployment completed'
-    ApiToken: 'xoxp-645208011568-756078985317-781517236146-531344d110338276248062e788e6b078'
+    ApiToken: 'xoxp-645208011568-794965329972-783955608531-27ec630b65370dd0c05111508e3d89fb'
     Channel: 'e2etraceability'
     IconUrl: 'devops-traceablity'
     NeverFails: false

@@ -11,13 +11,8 @@ pool:
 steps:
 - script: |
    echo Write your commands here
-   
-   echo Hi world
-   
    docker images
-   
    docker build -t hellofargate ./HelloFargate
-
    docker images
   displayName: 'Command Line Script'
 - task: SlackPoster@2

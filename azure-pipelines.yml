@@ -10,7 +10,6 @@ pool:
 
 steps:
 - script: |
-   echo Write your commands here
    docker images
    docker build -t hellofargate ./HelloFargate
    docker images

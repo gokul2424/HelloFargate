@@ -42,7 +42,7 @@ steps:
 - task: SlackPoster@2
   inputs:
     UserName: 'Azure to AWS'
-    Message: 'AWS deployment completed'
+    Message: '$(Build.Buildnumber) completed'
     ApiToken: '$(slacktoken)'
     Channel: 'devops-traceablity'
     IconUrl: 'devops-traceablity'

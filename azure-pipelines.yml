@@ -18,7 +18,7 @@ steps:
 - task: SlackPoster@2
   inputs:
     UserName: 'Azure to AWS'
-    Message: 'AWS deployment started'
+    Message: '$(Build.Buildnumber) Started. \n Build.DefinitionName: $(Build.DefinitionName). \n Build.BuildId: $(Build.BuildId). \n Build.QueuedBy: $(Build.QueuedBy)'
     ApiToken: '$(slacktoken)'
     Channel: 'devops-traceablity'
     IconUrl: 'devops-traceablity'

@@ -29,6 +29,13 @@ steps:
     regionName: 'us-east-1'
     imageSource: 'imagename'
     sourceImageName: 'hellofargate'
+- task: ECRPushImage@1
+  inputs:
+    awsCredentials: 'Azureto AWS'
+    regionName: 'us-east-1'
+    imageSource: 'imagename'
+    sourceImageName: 'hellofargate'
+    repositoryName: 'devopsdemolatest'
     repositoryName: 'devopsdemolatest'
 
 - task: AWSCLI@1

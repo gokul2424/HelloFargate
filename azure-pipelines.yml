@@ -45,3 +45,15 @@ steps:
     Channel: 'devops-traceablity'
     IconUrl: 'devops-traceablity'
     NeverFails: false
+- task: kiuwan-baseline-analysis-task@2
+  inputs:
+    kiuwanConnection: 'KiuwanAnalysis'
+    projectnameselector: 'default'
+    analysislabel: 'ECSFragateAnalysis'
+    includeinsight: true
+    uploadsnippets: true
+    uploadfiles: false
+    skipclones: false
+    overridedotkiuwan: false
+    overrideappmodel: false
+    dbanalysis: false

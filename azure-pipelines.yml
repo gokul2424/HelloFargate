@@ -25,14 +25,14 @@ steps:
     NeverFails: false
 - task: ECRPushImage@1
   inputs:
-    awsCredentials: 'Azureto AWS'
+    awsCredentials: 'AWS'
     regionName: 'us-east-1'
     imageSource: 'imagename'
     sourceImageName: 'hellofargate'
     repositoryName: 'devopsdemolatest'
 - task: AWSCLI@1
   inputs:
-    awsCredentials: 'Azureto AWS'
+    awsCredentials: 'AWS'
     regionName: 'us-east-1'
     awsCommand: 'ecs'
     awsSubCommand: 'update-service'

@@ -41,7 +41,7 @@ steps:
   inputs:
     UserName: 'Azure to AWS'
     Message: '$(Build.DefinitionName) completed'
-    ApiToken: '$(slacktoken)'
+    ApiToken: '$(slacktoken1)'
     Channel: 'devops-traceablity'
     IconUrl: 'devops-traceablity'
     NeverFails: false

@@ -2,7 +2,8 @@ node{
    def app
    stage('checkout scm')
    {
-   checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'Jenkins_Git', url: 'https://github.com/VinutnaNandyala/HelloFargate']]])
+   checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, 
+	     extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'Jenkins_Git', url: 'https://github.com/gokul2424/HelloFargate']]])
    }
    stage('build image'){
        sh '''
